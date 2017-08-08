@@ -2,8 +2,15 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="<%= url('/styles/styles.css') %>" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
   <body>
+  	<div id = "faux-header">
+  		<h1>Riley's Web Apps</h1>
+  		<ul>
+    	<li><a class="link" href="/caesar-cipher" title="Caesar Cipher">Caesar Cipher</a></li><li><a class="link" href="/hangman" title="Hangman">Hangman</a></li><li><a class="link" href="/tic-tac-toe" title="tic-tac-toe">Tic-Tac-Toe</a></li>
+  		</ul>
+		</div>
     <%= yield %>
   </body>
 </html>
