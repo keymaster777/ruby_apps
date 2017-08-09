@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'erb'
 require 'sinatra/reloader' if development?
+require_relative "hangman"
 
 get '/' do
 	erb :index
@@ -11,6 +12,7 @@ get '/caesar-cipher' do
 end
 
 get '/hangman' do
+	@game=Hangman.new
 	erb :hangman
 end
 
