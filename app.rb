@@ -19,7 +19,7 @@ get '/tic-tac-toe' do
 end
 
 post '/caesar-cipher' do
-	@message = params["message"]
+	@message = params["message"].strip
 	@shift = params["shift"]
 	redirect "/caesar-cipher?message=#{@message}&shift=#{@shift}"
 end
