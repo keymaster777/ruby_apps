@@ -3,6 +3,13 @@ require 'erb'
 require 'sinatra/reloader' if development?
 require_relative "hangman"
 
+
+configure do
+	enable :sessions
+	set :session_secret, "secret"
+end
+
+#remember to check out yilmazgunalps github for an example of tracking sessions
 get '/' do
 	erb :index
 end
