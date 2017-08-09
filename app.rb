@@ -7,9 +7,6 @@ get '/' do
 end
 
 get '/caesar-cipher' do
-	@message = params["message"]
-	@shift = params["shift"].to_i
-	@coded_message=cipher(@message,@shift) unless @message == nil
 	erb :caesar_cipher
 end
 
@@ -20,6 +17,13 @@ end
 get '/tic-tac-toe' do
 	erb :tic_tac_toe
 end
+
+post '/caesar-cipher' do
+	@message = params["message"]
+	@shift = params["shift"]
+	redirect "/caesar-cipher?message=#{@message}&shift=#{@shift}"
+end
+
 
 def cipher(input,shift)
 	original_input=input.split("")
