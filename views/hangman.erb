@@ -2,4 +2,7 @@
 	<h2>Hangman</h2>
 	<p><%= @game.word %></p>
 	<p><%= @game.hidden_word.join("") %></p>
+	<form>
+		<input id="text-input" class="input-style" type="text" name="guess" /><input id="hangman-submit-btn" class="input-style" type="submit" name="submit" value="Guess" />
+	</form>
 </div>

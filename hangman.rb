@@ -1,5 +1,5 @@
 class Hangman
-	attr_accessor :word, :hidden_word
+	attr_accessor :word, :hidden_word, :playing
 
 	def initialize
 		@word=word_select.downcase
