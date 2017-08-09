@@ -9,7 +9,7 @@ end
 get '/caesar-cipher' do
 	@message = params["message"]
 	@shift = params["shift"].to_i
-	@coded_message=cipher(@message,@shift)
+	@coded_message=cipher(@message,@shift) unless @message == nil
 	erb :caesar_cipher
 end
 

@@ -160,3 +160,19 @@ textarea:focus{
 .input-style{
 	border:1px solid #808080;
 }
+#caesar-form{
+	margin-top:10px;
+}
+.encoded-message{
+	text-align:center;
+	margin-bottom:15px;
+	border-top:1px solid #808080;
+	padding-top:20px;
+}
+.encode-title{
+	position:relative;
+	top:8px;
+	padding:0 5px;
+	display:inline;
+	background:white;
+}
